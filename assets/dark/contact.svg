@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="400" viewBox="0 0 900 400" role="img" aria-label="Contact">
+<title>Contact</title>
+<style>
+  text { font-family: system-ui, -apple-system, 'Helvetica Neue', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'BIZ UDPGothic', Meiryo, sans-serif; }
+  .mono { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace; }
+  /* 既定は最終状態。アニメーションが止まる環境でも内容が欠けないよう、from 側だけを書く */
+  .up { animation: up .9s cubic-bezier(.32,.72,0,1) both; }
+  .fade { animation: fade .9s cubic-bezier(.32,.72,0,1) both; }
+  .draw { transform-box: fill-box; transform-origin: left center; animation: draw 1.1s cubic-bezier(.32,.72,0,1) both; }
+  @keyframes up { from { opacity: 0; transform: translateY(14px); } }
+  @keyframes fade { from { opacity: 0; } }
+  @keyframes draw { from { transform: scaleX(0); } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+
+</style>
+<rect width="900" height="400" fill="#141412"/>
+
+<g class="fade" style="animation-delay:0.00s"><line x1="48" y1="39.5" x2="72" y2="39.5" stroke="#a8a49b"/><text x="84" y="44" font-size="13" fill="#f2f0ea"><tspan font-weight="600" letter-spacing="1.8">CONTACT</tspan><tspan dx="8" letter-spacing=".4" fill="#918d84">/ Get in touch</tspan></text></g>
+<text class="up" style="animation-delay:.1s" x="44" y="150" font-size="92" font-weight="800" letter-spacing="-4" fill="#f2f0ea">Let’s build</text>
+<text class="up" style="animation-delay:.2s" x="44" y="240" font-size="92" font-weight="800" letter-spacing="-4" fill="#f2f0ea">something<tspan dx="28">→</tspan></text>
+<line class="draw" style="animation-delay:.4s" x1="48" y1="282" x2="558" y2="282" stroke="#302e29"/>
+<g class="fade" style="animation-delay:.5s"><path transform="translate(48 302)" fill="#f2f0ea" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8Z"/><text x="74" y="315" font-size="14" fill="#f2f0ea">GitHub</text><text x="132" y="315" class="mono" font-size="12" fill="#918d84">@lapt12</text></g>
+<line x1="48" y1="348" x2="852" y2="348" stroke="#302e29"/>
+<text x="48" y="376" font-size="12" fill="#918d84">© 2026 apt</text><text x="852" y="376" text-anchor="end" font-size="12" fill="#918d84">Content synced from the portfolio site.</text>
+</svg>

@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1868" viewBox="0 0 900 1868" role="img" aria-label="Works">
+<title>Works</title>
+<style>
+  text { font-family: system-ui, -apple-system, 'Helvetica Neue', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'BIZ UDPGothic', Meiryo, sans-serif; }
+  .mono { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace; }
+  /* 既定は最終状態。アニメーションが止まる環境でも内容が欠けないよう、from 側だけを書く */
+  .up { animation: up .9s cubic-bezier(.32,.72,0,1) both; }
+  .fade { animation: fade .9s cubic-bezier(.32,.72,0,1) both; }
+  .draw { transform-box: fill-box; transform-origin: left center; animation: draw 1.1s cubic-bezier(.32,.72,0,1) both; }
+  @keyframes up { from { opacity: 0; transform: translateY(14px); } }
+  @keyframes fade { from { opacity: 0; } }
+  @keyframes draw { from { transform: scaleX(0); } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+
+</style>
+<rect width="900" height="1868" fill="#141412"/>
+
+<g class="fade" style="animation-delay:0.00s"><line x1="48" y1="39.5" x2="72" y2="39.5" stroke="#a8a49b"/><text x="84" y="44" font-size="13" fill="#f2f0ea"><tspan font-weight="600" letter-spacing="1.8">WORKS</tspan><tspan dx="8" letter-spacing=".4" fill="#918d84">/ Selected works</tspan></text></g>
+<g class="up" style="animation-delay:0.15s">
+<line x1="170" y1="84" x2="852" y2="84" stroke="#302e29"/>
+<line x1="48" y1="84" x2="146" y2="84" stroke="#f2f0ea"/>
+<text x="48" y="128" font-size="24" font-weight="700" fill="#f2f0ea">2025</text>
+<text x="170" y="124" class="mono" font-size="12" fill="#918d84">01</text>
+<text x="214" y="134" font-size="32" font-weight="700" letter-spacing="-.8" fill="#f2f0ea">Aulus</text>
+<text x="852" y="120" text-anchor="end" class="mono" font-size="12" fill="#918d84">2025-07-25</text>
+<rect x="214" y="148" width="48.0" height="20" rx="2" fill="#1b2622" stroke="#7cba9d"/><circle cx="223" cy="158" r="3" fill="#7cba9d"/><text x="231" y="162.5" font-size="11" font-weight="600" fill="#7cba9d">完成</text>
+<text x="272.0" y="162.5" font-size="12" fill="#918d84">Python</text>
+<text x="214" y="196" font-size="14" fill="#a8a49b">経済ゲーム・RPG・自動モデレーションまで担う多機能 Discord Bot</text>
+</g>
+<g class="up" style="animation-delay:0.22s">
+<line x1="170" y1="218" x2="852" y2="218" stroke="#302e29"/>
+<text x="170" y="258" class="mono" font-size="12" fill="#918d84">02</text>
+<text x="214" y="268" font-size="32" font-weight="700" letter-spacing="-.8" fill="#f2f0ea">Kouka</text>
+<text x="852" y="254" text-anchor="end" class="mono" font-size="12" fill="#918d84">2025-08-19</text>
+<rect x="214" y="282" width="48.0" height="20" rx="2" fill="#1b2622" stroke="#7cba9d"/><circle cx="223" cy="292" r="3" fill="#7cba9d"/><text x="231" y="296.5" font-size="11" font-weight="600" fill="#7cba9d">完成</text>
+<text x="272.0" y="296.5" font-size="12" fill="#918d84">Python</text>
+<text x="214" y="330" font-size="14" fill="#a8a49b">サーバー間チャット・音楽再生・語彙テストを備えた多機能 Discord Bot</text>
+</g>
+<g class="up" style="animation-delay:0.29s">
+<line x1="170" y1="352" x2="852" y2="352" stroke="#302e29"/>
+<line x1="48" y1="352" x2="146" y2="352" stroke="#f2f0ea"/>
+<text x="48" y="396" font-size="24" font-weight="700" fill="#f2f0ea">2026</text>
+<text x="170" y="392" class="mono" font-size="12" fill="#918d84">03</text>
+<text x="214" y="402" font-size="32" font-weight="700" letter-spacing="-.8" fill="#f2f0ea">Splatoon Bot</text>
+<text x="852" y="388" text-anchor="end" class="mono" font-size="12" fill="#918d84">2026-02-11</text>
+<rect x="214" y="416" width="48.0" height="20" rx="2" fill="#1b2622" stroke="#7cba9d"/><circle cx="223" cy="426" r="3" fill="#7cba9d"/><text x="231" y="430.5" font-size="11" font-weight="600" fill="#7cba9d">完成</text>
+<text x="272.0" y="430.5" font-size="12" fill="#918d84">Python</text>
+<text x="214" y="464" font-size="14" fill="#a8a49b">募集ボード・ステージ自動更新・投稿監視を担う運営支援 Discord Bot</text>
+</g>
+<g class="up" style="animation-delay:0.36s">
+<line x1="170" y1="486" x2="852" y2="486" stroke="#302e29"/>
+<text x="170" y="526" class="mono" font-size="12" fill="#918d84">04</text>
+<text x="214" y="536" font-size="32" font-weight="700" letter-spacing="-.8" fill="#f2f0ea">TOEIC Tester Bot</text>
+<text x="852" y="522" text-anchor="end" class="mono" font-size="12" fill="#918d84">2026-04-07</text>
+<rect x="214" y="550" width="48.0" height="20" rx="2" fill="#1b2622" stroke="#7cba9d"/><circle cx="223" cy="560" r="3" fill="#7cba9d"/><text x="231" y="564.5" font-size="11" font-weight="600" fill="#7cba9d">完成</text>
+<text x="272.0" y="564.5" font-size="12" fill="#918d84">Python</text>
+<text x="214" y="598" font-size="14" fill="#a8a49b">1250 語をクイズ形式で学習できる招待制の TOEIC 単語 Bot</text>
+</g>
+<g class="up" style="animation-delay:0.43s">
+<line x1="170" y1="620" x2="852" y2="620" stroke="#302e29"/>
+<text x="170" y="660" class="mono" font-size="12" fill="#918d84">05</text>
+<text x="214" y="670" font-size="32" font-weight="700" letter-spacing="-.8" fill="#f2f0ea">2.5D R.E.P.O</text>
+<text x="852" y="656" text-anchor="end" class="mono" font-size="12" fill="#918d84">2026-04-11</text>
+<rect x="214" y="684" width="48.0" height="20" rx="2" fill="#1b2622" stroke="#7cba9d"/><circle cx="223" cy="694" r="3" fill="#7cba9d"/><text x="231" y="698.5" font-size="11" font-weight="600" fill="#7cba9d">完成</text>
+<text x="272.0" y="698.5" font-size="12" fill="#918d84">Java</text>
+<text x="214" y="732" font-size="14" fill="#a8a49b">自作レイキャスティングエンジンで描く Java 製 2.5D ホラー探索ゲーム</text>
+</g>
+<g class="up" style="animation-delay:0.50s">
+<line x1="170" y1="754" x2="852" y2="754" stroke="#302e29"/>
+<text x="170" y="794" class="mono" font-size="12" fill="#918d84">06</text>
+<text x="214" y="804" font-size="32" font-weight="700" letter-spacing="-.8" fill="#f2f0ea">Piano Music GUI</text>
+<text x="852" y="790" text-anchor="end" class="mono" font-size="12" fill="#918d84">2026-05-06</text>
+<rect x="214" y="818" width="48.0" height="20" rx="2" fill="#1b2622" stroke="#7cba9d"/><circle cx="223" cy="828" r="3" fill="#7cba9d"/><text x="231" y="832.5" font-size="11" font-weight="600" fill="#7cba9d">完成</text>
+<text x="272.0" y="832.5" font-size="12" fill="#918d84">Python</text>
+<text x="214" y="866" font-size="14" fill="#a8a49b">音源をピアノ演奏として自動採譜し、専用音源で再合成するデスクトップアプリ</text>
+</g>
+<g class="up" style="animation-delay:0.57s">
+<line x1="170" y1="888" x2="852" y2="888" stroke="#302e29"/>
+<text x="170" y="928" class="mono" font-size="12" fill="#918d84">07</text>
+<text x="214" y="938" font-size="32" font-weight="700" letter-spacing="-.8" fill="#f2f0ea">TDU Calendar</text>
+<text x="852" y="924" text-anchor="end" class="mono" font-size="12" fill="#918d84">2026-06-14</text>
+<rect x="214" y="952" width="59.0" height="20" rx="2" fill="#2a241a" stroke="#d7ab6d"/><circle cx="223" cy="962" r="3" fill="#d7ab6d"/><text x="231" y="966.5" font-size="11" font-weight="600" fill="#d7ab6d">開発中</text>
+<text x="283.0" y="966.5" font-size="12" fill="#918d84">Python</text>
+<text x="214" y="1000" font-size="14" fill="#a8a49b">大学の時間割・履修登録・タスク管理をこなす Discord Bot（開発中）</text>
+</g>
+<g class="up" style="animation-delay:0.64s">
+<line x1="170" y1="1022" x2="852" y2="1022" stroke="#302e29"/>
+<text x="170" y="1062" class="mono" font-size="12" fill="#918d84">08</text>
+<text x="214" y="1072" font-size="32" font-weight="700" letter-spacing="-.8" fill="#f2f0ea">Photogrammetry App</text>
+<text x="852" y="1058" text-anchor="end" class="mono" font-size="12" fill="#918d84">2026-06-26</text>
+<rect x="214" y="1086" width="48.0" height="20" rx="2" fill="#1b2622" stroke="#7cba9d"/><circle cx="223" cy="1096" r="3" fill="#7cba9d"/><text x="231" y="1100.5" font-size="11" font-weight="600" fill="#7cba9d">完成</text>
+<text x="272.0" y="1100.5" font-size="12" fill="#918d84">Python</text>
+<text x="214" y="1134" font-size="14" fill="#a8a49b">カメラ映像から 3D 点群マップを生成する VGGT ベースのフォトグラメトリアプリ</text>
+</g>
+<g class="up" style="animation-delay:0.71s">
+<line x1="170" y1="1156" x2="852" y2="1156" stroke="#302e29"/>
+<text x="170" y="1196" class="mono" font-size="12" fill="#918d84">09</text>
+<text x="214" y="1206" font-size="32" font-weight="700" letter-spacing="-.8" fill="#f2f0ea">AI Registration</text>
+<text x="852" y="1192" text-anchor="end" class="mono" font-size="12" fill="#918d84">2026-07-02</text>
+<rect x="214" y="1220" width="48.0" height="20" rx="2" fill="#1b2622" stroke="#7cba9d"/><circle cx="223" cy="1230" r="3" fill="#7cba9d"/><text x="231" y="1234.5" font-size="11" font-weight="600" fill="#7cba9d">完成</text>
+<text x="272.0" y="1234.5" font-size="12" fill="#918d84">TypeScript</text>
+<text x="214" y="1268" font-size="14" fill="#a8a49b">AI と対話しながら履修計画を組める履修登録支援 Web アプリ</text>
+</g>
+<g class="up" style="animation-delay:0.78s">
+<line x1="170" y1="1290" x2="852" y2="1290" stroke="#302e29"/>
+<text x="170" y="1330" class="mono" font-size="12" fill="#918d84">10</text>
+<text x="214" y="1340" font-size="32" font-weight="700" letter-spacing="-.8" fill="#f2f0ea">NowInRoom</text>
+<text x="852" y="1326" text-anchor="end" class="mono" font-size="12" fill="#918d84">2026-07-11</text>
+<rect x="214" y="1354" width="48.0" height="20" rx="2" fill="#1b2622" stroke="#7cba9d"/><circle cx="223" cy="1364" r="3" fill="#7cba9d"/><text x="231" y="1368.5" font-size="11" font-weight="600" fill="#7cba9d">完成</text>
+<text x="272.0" y="1368.5" font-size="12" fill="#918d84">TypeScript</text>
+<text x="214" y="1402" font-size="14" fill="#a8a49b">キャンパスを 3D 地図化し、いま授業中の教室を可視化する Web サービス</text>
+</g>
+<g class="up" style="animation-delay:0.85s">
+<line x1="170" y1="1424" x2="852" y2="1424" stroke="#302e29"/>
+<text x="170" y="1464" class="mono" font-size="12" fill="#918d84">11</text>
+<text x="214" y="1474" font-size="32" font-weight="700" letter-spacing="-.8" fill="#f2f0ea">Minecraft VLM Harness</text>
+<text x="852" y="1460" text-anchor="end" class="mono" font-size="12" fill="#918d84">2026-08-04</text>
+<rect x="214" y="1488" width="59.0" height="20" rx="2" fill="#2a241a" stroke="#d7ab6d"/><circle cx="223" cy="1498" r="3" fill="#d7ab6d"/><text x="231" y="1502.5" font-size="11" font-weight="600" fill="#d7ab6d">開発中</text>
+<text x="283.0" y="1502.5" font-size="12" fill="#918d84">Python</text>
+<text x="214" y="1536" font-size="14" fill="#a8a49b">ローカル VLM が Minecraft をリアルタイム操作するエージェント基盤（開発中）</text>
+</g>
+<g class="up" style="animation-delay:0.92s">
+<line x1="170" y1="1558" x2="852" y2="1558" stroke="#302e29"/>
+<text x="170" y="1598" class="mono" font-size="12" fill="#918d84">12</text>
+<text x="214" y="1608" font-size="32" font-weight="700" letter-spacing="-.8" fill="#f2f0ea">Portfolio</text>
+<text x="852" y="1594" text-anchor="end" class="mono" font-size="12" fill="#918d84">2026-08-15</text>
+<rect x="214" y="1622" width="59.0" height="20" rx="2" fill="#2a241a" stroke="#d7ab6d"/><circle cx="223" cy="1632" r="3" fill="#d7ab6d"/><text x="231" y="1636.5" font-size="11" font-weight="600" fill="#d7ab6d">開発中</text>
+<text x="283.0" y="1636.5" font-size="12" fill="#918d84">TypeScript</text>
+<text x="214" y="1670" font-size="14" fill="#a8a49b">GitHub 連携とコード閲覧機能を備えた、このサイト自体の実装</text>
+</g>
+<g class="up" style="animation-delay:0.99s">
+<line x1="170" y1="1692" x2="852" y2="1692" stroke="#302e29"/>
+<text x="170" y="1732" class="mono" font-size="12" fill="#918d84">13</text>
+<text x="214" y="1742" font-size="32" font-weight="700" letter-spacing="-.8" fill="#f2f0ea">Eris Harness</text>
+<text x="852" y="1728" text-anchor="end" class="mono" font-size="12" fill="#918d84">2026-09-04</text>
+<rect x="214" y="1756" width="48.0" height="20" rx="2" fill="#1b2622" stroke="#7cba9d"/><circle cx="223" cy="1766" r="3" fill="#7cba9d"/><text x="231" y="1770.5" font-size="11" font-weight="600" fill="#7cba9d">完成</text>
+<text x="272.0" y="1770.5" font-size="12" fill="#918d84">Python</text>
+<text x="214" y="1804" font-size="14" fill="#a8a49b">ローカル LLM を Discord・音声通話・CLI から使う個人用 AI アシスタント基盤</text>
+</g>
+<line x1="170" y1="1826" x2="852" y2="1826" stroke="#302e29"/>
+</svg>

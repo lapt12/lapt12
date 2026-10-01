@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="480" viewBox="0 0 900 480" role="img" aria-label="apt — Portfolio">
+<title>apt — Portfolio</title>
+<style>
+  text { font-family: system-ui, -apple-system, 'Helvetica Neue', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'BIZ UDPGothic', Meiryo, sans-serif; }
+  .mono { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace; }
+  /* 既定は最終状態。アニメーションが止まる環境でも内容が欠けないよう、from 側だけを書く */
+  .up { animation: up .9s cubic-bezier(.32,.72,0,1) both; }
+  .fade { animation: fade .9s cubic-bezier(.32,.72,0,1) both; }
+  .draw { transform-box: fill-box; transform-origin: left center; animation: draw 1.1s cubic-bezier(.32,.72,0,1) both; }
+  @keyframes up { from { opacity: 0; transform: translateY(14px); } }
+  @keyframes fade { from { opacity: 0; } }
+  @keyframes draw { from { transform: scaleX(0); } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  .band { animation: band 60s linear infinite; }
+  @keyframes band { to { transform: translateX(-2200px); } }
+  .rise { transform-box: fill-box; animation: rise 1s cubic-bezier(.32,.72,0,1) both; }
+  @keyframes rise { from { transform: translateY(110%); } }
+  .cue { animation: cue 2s cubic-bezier(.32,.72,0,1) infinite; }
+  @keyframes cue { from { transform: translateY(-40px); } to { transform: translateY(40px); } }
+</style>
+<rect width="900" height="480" fill="#141412"/>
+
+<text x="48" y="34" font-size="14" font-weight="700" fill="#f2f0ea">Portfolio</text><text x="852" y="34" text-anchor="end" font-size="12" fill="#a8a49b" word-spacing="14">About Works Tech Contact</text><rect class="draw" x="0" y="0" width="378" height="2" fill="#ff4d1c"/>
+<g aria-hidden="true"><g class="band">
+<text x="0" y="188" textLength="2200" lengthAdjust="spacingAndGlyphs" font-size="150" font-weight="900" letter-spacing="-6" fill="none" stroke="#4b4840" stroke-width="1.2">PORTFOLIO — ENGINEER — PORTFOLIO — ENGINEER — </text>
+<text x="2200" y="188" textLength="2200" lengthAdjust="spacingAndGlyphs" font-size="150" font-weight="900" letter-spacing="-6" fill="none" stroke="#4b4840" stroke-width="1.2">PORTFOLIO — ENGINEER — PORTFOLIO — ENGINEER — </text>
+</g></g>
+<text class="fade" x="48" y="222" font-size="13" letter-spacing="2" fill="#918d84">PORTFOLIO / 2025 — 2026</text>
+<clipPath id="nm"><rect x="0" y="228" width="900" height="196"/></clipPath><g clip-path="url(#nm)"><text class="rise" style="animation-delay:.3s" x="40" y="386" font-size="190" font-weight="800" letter-spacing="-7" fill="#f2f0ea">apt</text></g>
+<text class="up" style="animation-delay:0.76s" x="48" y="450" font-size="16" fill="#a8a49b">Python / Discord Botを中心に開発するエンジニア</text>
+<g class="up" style="animation-delay:0.91s"><text x="804.9" y="414" font-size="13" fill="#918d84">GitHub</text><text x="804.9" y="436" font-size="13" fill="#f2f0ea">@lapt12</text></g>
+<g class="up" style="animation-delay:0.91s"><text x="693.3" y="414" font-size="13" fill="#918d84">Works</text><text x="693.3" y="436" font-size="13" fill="#f2f0ea">13 projects</text></g>
+<g class="up" style="animation-delay:0.91s"><text x="484.8" y="414" font-size="13" fill="#918d84">Stack</text><text x="484.8" y="436" font-size="13" fill="#f2f0ea">Python · TypeScript · Java</text></g>
+<line class="draw" style="animation-delay:0.51s" x1="48" y1="468" x2="852" y2="468" stroke="#f2f0ea"/>
+</svg>
