@@ -1,0 +1,298 @@
+{
+  "tagline": "Python / Discord Botを中心に開発するエンジニア",
+  "bio": "Python・Javaなどの言語を中心に、discord内で動くRPGから機械学習を用いた音楽の譜面生成アプリまで幅広く開発しています。\n\nワクワクすることを突きつけめることが好きで、\n興味がある物事の開発を通して新しい技術を学ぶことを心がけています。\n最近はTypeScriptとReactに興味を持ち、\n言語の枠にとらわれない設計・実装を目指しています。\n",
+  "socialLinks": [
+    {
+      "label": "GitHub",
+      "href": "https://github.com/lapt12"
+    }
+  ],
+  "techs": [
+    {
+      "id": "python",
+      "label": "Python",
+      "category": "language",
+      "learning": false
+    },
+    {
+      "id": "typescript",
+      "label": "TypeScript",
+      "category": "language",
+      "learning": false
+    },
+    {
+      "id": "java",
+      "label": "Java",
+      "category": "language",
+      "learning": false
+    },
+    {
+      "id": "react",
+      "label": "React",
+      "category": "frontend",
+      "learning": false
+    },
+    {
+      "id": "vite",
+      "label": "Vite",
+      "category": "frontend",
+      "learning": false
+    },
+    {
+      "id": "tailwind",
+      "label": "Tailwind CSS",
+      "category": "frontend",
+      "learning": false
+    },
+    {
+      "id": "workers",
+      "label": "Cloudflare Workers",
+      "category": "backend",
+      "learning": false
+    }
+  ],
+  "projects": [
+    {
+      "slug": "aulus",
+      "title": "Aulus",
+      "tagline": "経済ゲーム・RPG・自動モデレーションまで担う多機能 Discord Bot",
+      "description": "個人サーバー向けに開発した多機能 Discord Bot。チンチロ・ブラックジャック・ルーレットなどの経済ゲームや簡易 RPG、勉強タイマー用のボイスチャンネル管理と TTS 読み上げまで、幅広い機能を 1 つの Bot にまとめている。英字入力をローマ字変換で日本語化する機能や、スパム検知による自動タイムアウト、生成 AI を使った不適切発言の判定など、サーバー運用を助ける自動化も持つ。",
+      "createdAt": "2025-07-25",
+      "status": "completed",
+      "primaryLang": "Python",
+      "tech": [
+        "python"
+      ],
+      "highlights": [
+        "経済ゲームと RPG を同一 Bot に実装し、現金とローンからなる共通の仮想通貨システムで管理",
+        "勉強用ボイスチャンネルの入退室を検知し、タイマー・離席通知・作業ログを TTS 読み上げと連動",
+        "スパム検知と生成 AI による不適切発言の判定を組み合わせた自動モデレーション",
+        "全イベントハンドラをデコレータ型のエラーハンドラで包み、例外発生時に管理者へ自動通知"
+      ]
+    },
+    {
+      "slug": "kouka",
+      "title": "Kouka",
+      "tagline": "サーバー間チャット・音楽再生・語彙テストを備えた多機能 Discord Bot",
+      "description": "サーバーをまたぐグローバルチャット、YouTube 音楽再生、素数当てゲーム、投票、単語テストといった機能を、動的な UI コンポーネントでまとめて提供する Bot。チャンネルごとに発行した Webhook を介して他サーバーへメッセージを中継する仕組みや、FastAPI サーバーで進捗円グラフの画像を生成して Discord へ返す仕組みを持つ。データは SQLite に保存し、自作の Collection クラスで非同期の CRUD を抽象化している。",
+      "createdAt": "2025-08-19",
+      "status": "completed",
+      "primaryLang": "Python",
+      "tech": [
+        "python"
+      ],
+      "highlights": [
+        "サーバー間で発行した Webhook を相互接続し、添付ファイルや返信を保ったままメッセージを中継",
+        "FastAPI と matplotlib で進捗円グラフを PNG 生成するサブサーバーを実装し、単語テスト画面に組み込み",
+        "SQLite 操作を共通の Collection クラスへ抽象化し、複数の機能モジュールから非同期に読み書き",
+        "機能ごとに callback / layout / loop へファイルを分割し、肥大化しやすい Bot の保守性を確保"
+      ]
+    },
+    {
+      "slug": "splatoon-bot",
+      "title": "Splatoon Bot",
+      "tagline": "募集ボード・ステージ自動更新・投稿監視を担う運営支援 Discord Bot",
+      "description": "スプラトゥーン専用 Discord サーバーの運営を支援する Bot。マッチの種類ごとに募集ボードを自動生成し、参加・退出・終了をボタン操作で完結させる。対戦ステージのスケジュールを API から 2 時間おきに取得して既存の掲示メッセージを自動更新するほか、Discord トークンに似た文字列の投稿を検知して自動タイムアウトする保護機能や、通報内容を生成 AI で解析してスコアリングする報告システムも備える。",
+      "createdAt": "2026-02-11",
+      "status": "completed",
+      "primaryLang": "Python",
+      "tech": [
+        "python"
+      ],
+      "highlights": [
+        "マッチ種別ごとの募集ボードをボタン操作で完結させ、10 分無人のボイスチャンネルを検知して自動終了",
+        "ステージスケジュールを API から定期取得し、既存の掲示メッセージを編集して更新",
+        "Discord トークン類似文字列の自動検知・削除とタイムアウトによる、トークン流出への保護",
+        "handler / setup / main_process / sub_process へ責務を分離したレイヤード構成"
+      ]
+    },
+    {
+      "slug": "toeic-tester-bot",
+      "title": "TOEIC Tester Bot",
+      "tagline": "1250 語をクイズ形式で学習できる招待制の TOEIC 単語 Bot",
+      "description": "TOEIC 頻出の 1250 語を 10 セットに分けて 4 択で出題する Discord Bot。サーバーへ追加するのではなく個人アカウントにインストールする形式のため、どのサーバーからでも DM からでも利用できる。正答率・進捗・苦手単語をユーザーごとに記録し、FastAPI サーバーで生成した進捗円グラフをホーム画面に表示する。進捗画像は DB にキャッシュして、生成のたびに走る呼び出しのボトルネックを解消している。",
+      "createdAt": "2026-04-07",
+      "status": "completed",
+      "primaryLang": "Python",
+      "tech": [
+        "python"
+      ],
+      "highlights": [
+        "discord.py のユーザーインストール機能により、サーバー追加なしで DM からも利用可能にした",
+        "FastAPI と matplotlib で進捗円グラフを生成し、画像を DB にキャッシュして呼び出しを削減",
+        "招待制運用のための認証と、ユーザー ID の検証によるなりすまし対策",
+        "英日・日英のモード切り替えや苦手単語の自動登録など、反復学習を前提とした UI 設計"
+      ]
+    },
+    {
+      "slug": "repo-25d",
+      "title": "2.5D R.E.P.O",
+      "tagline": "自作レイキャスティングエンジンで描く Java 製 2.5D ホラー探索ゲーム",
+      "description": "Java の Swing / AWT だけで実装した、自作レイキャスティングエンジンによる 2.5D ダンジョン探索ホラーゲーム。ランダム生成される多層ダンジョンを一人称視点で探索し、収集物のスコアが目標に達すると次の階層へ進む。敵は徘徊・接近・調査・追跡・攻撃の 5 状態を持つステートマシンとして実装し、足音や視認範囲をきっかけに振る舞いを変える。セーブデータは外部ライブラリを使わず、正規表現で自前実装した JSON 風フォーマットで読み書きしている。",
+      "createdAt": "2026-04-11",
+      "status": "completed",
+      "primaryLang": "Java",
+      "tech": [
+        "java"
+      ],
+      "highlights": [
+        "自作のレイキャスティングエンジンでダンジョンを疑似 3D として描画",
+        "敵 AI を 5 状態のステートマシンとして実装し、足音・視認範囲・追跡の記憶時間で挙動を変化させる",
+        "ルームテンプレートと通路・階段の接続から、毎回異なる多層ダンジョンをランダム生成",
+        "JSON ライクな独自フォーマットを正規表現で解析するセーブ機構を、外部ライブラリなしで自前実装"
+      ]
+    },
+    {
+      "slug": "piano-music-gui",
+      "title": "Piano Music GUI",
+      "tagline": "音源をピアノ演奏として自動採譜し、専用音源で再合成するデスクトップアプリ",
+      "description": "MP3 / WAV を読み込み、深層学習モデルで和音やペダル操作までピアノ演奏として自動採譜（MIDI 化）し、Salamander Grand Piano 音源と FluidSynth で再合成するデスクトップアプリ。Demucs で曲をステム分離し、ピアノ以外の楽器も個別に採譜してミックスするモードも持つ。GUI は Eel で HTML / JS 製のフロントエンドをネイティブウィンドウとして表示し、Canvas 製のピアノロールを再生しながら生成音声を確認できる。",
+      "createdAt": "2026-05-06",
+      "status": "completed",
+      "primaryLang": "Python",
+      "tech": [
+        "python"
+      ],
+      "highlights": [
+        "学習済みモデルにより、和音やペダル操作まで含めて MIDI 化する高精度なピアノ転写",
+        "Demucs によるステム分離で、他の楽器も個別に採譜してミックスするモードを搭載",
+        "GB 級の外部ツールと音源を初回起動時に自動取得し、サイズと RIFF ヘッダを検証してから配置",
+        "Eel による Python と JS のブリッジで、Canvas 製ピアノロールと生成音声をその場で確認できる"
+      ]
+    },
+    {
+      "slug": "tdu-calendar",
+      "title": "TDU Calendar",
+      "tagline": "大学の時間割・履修登録・タスク管理をこなす Discord Bot（開発中）",
+      "description": "大学の学生ポータルから配当科目情報を取得し、Discord のスラッシュコマンドで時間割画像の生成・必修科目の自動登録・タスクのリマインドをまとめて行う Bot。時間割は FastAPI + Pillow で画像として即時レンダリングし、履修登録は担当教員をセレクトメニューから選ぶ多段 UI で進められる。discord.py と aiosqlite による非同期実装で、現在も機能追加を続けている。",
+      "createdAt": "2026-06-14",
+      "status": "wip",
+      "primaryLang": "Python",
+      "tech": [
+        "python"
+      ],
+      "highlights": [
+        "Discord Bot と時間割画像生成用 FastAPI サーバーを 1 つのエントリポイントから同時起動する 2 プロセス構成",
+        "Pillow で曜日 × 時限の時間割グリッドを PNG 描画し、Discord 上でそのまま確認できる",
+        "履修登録をスラッシュコマンド → 教員選択 → 確認の多段 UI として実装",
+        "リマインドを discord.ext.tasks の非同期ループで管理し、画像キャッシュを定期的に掃除する"
+      ]
+    },
+    {
+      "slug": "photogrammetry-app",
+      "title": "Photogrammetry App",
+      "tagline": "カメラ映像から 3D 点群マップを生成する VGGT ベースのフォトグラメトリアプリ",
+      "description": "PC やラズパイのカメラ映像から VGGT・Depth Anything V2 で 3D 点群マップを生成し、ブラウザの Three.js ビューアで表示するフォトグラメトリアプリ。ラズパイ Zero をキャタピラ式ラジコンとして遠隔操作し、360 度回転スキャンで対象物を丸ごと点群化するモードも持つ。Flask サーバー・PC カメラワーカー・ブラウザの 3 プロセス構成で、モーターとカメラと録画はすべて mock / real を切り替えられるため実機なしでも通しで検証できる。",
+      "createdAt": "2026-06-26",
+      "status": "completed",
+      "primaryLang": "Python",
+      "tech": [
+        "python"
+      ],
+      "highlights": [
+        "VGGT（マルチビュー）と Depth Anything V2（単眼）を用途に応じて切り替える 2 系統の 3D 再構成パイプライン",
+        "ラズパイの 2ch リレー 2 枚でキャタピラを制御し、無操作時に自動停止する Watchdog を実装",
+        "スキャン結果のフレームを間引き・圧縮し、Wi-Fi 転送量を約 1/3 に削減",
+        "モーター・カメラ・録画すべてに mock / real の切り替えを持たせ、実機なしで通しの検証を可能にした"
+      ]
+    },
+    {
+      "slug": "ai-registration",
+      "title": "AI Registration",
+      "tagline": "AI と対話しながら履修計画を組める履修登録支援 Web アプリ",
+      "description": "大学の履修登録を、AI とのチャットで相談しながら時間割に組み込んでいける Web アプリ。科目データはすべて DB 由来のものを正とし、AI には検索結果の ID だけを参照させることでハルシネーションを構造的に防いでいる。卒業・進級要件の判定はクライアントとサーバーで共有する決定的な TypeScript の純関数として実装した。AI バックエンドは段階的に移行し、現在はローカル LLM で完結する構成で動作する。",
+      "createdAt": "2026-07-02",
+      "status": "completed",
+      "primaryLang": "TypeScript",
+      "tech": [
+        "typescript",
+        "react",
+        "tailwind"
+      ],
+      "highlights": [
+        "科目データは DB 由来のみを正とし、AI には検索結果の ID だけを渡してハルシネーションを構造的に遮断",
+        "卒業・進級要件の判定を client / server 共有の純関数として実装し、時間割編集のたびに即時再計算",
+        "AI バックエンドをクラウド API からローカル LLM へ段階的に移行し、モデル未導入時は自動取得まで実装",
+        "Playwright 製のスクレイパーでシラバス・時間割を収集し、Zod で正規化して DB へ投入"
+      ]
+    },
+    {
+      "slug": "now-in-room",
+      "title": "NowInRoom",
+      "tagline": "キャンパスを 3D 地図化し、いま授業中の教室を可視化する Web サービス",
+      "description": "大学のキャンパスを Three.js による 3D マップで表示し、「いまどの教室で授業が行われているか」を可視化する非公式 Web サービス。ドメインロジック・DB スキーマ・収集基盤・配信 API・2D / 3D ビューまでを pnpm workspaces と Turborepo のモノレポとして実装している。事前調査で対象ポータルの利用規約と robots.txt を確認したうえで、大学ポータルの公開シラバスから当日の時間割を取得する LIVE 機能を実装し、CSP nonce や厳格なセキュリティヘッダーを含む本番向けの構成まで仕上げた。",
+      "createdAt": "2026-07-11",
+      "status": "completed",
+      "primaryLang": "TypeScript",
+      "tech": [
+        "typescript",
+        "react"
+      ],
+      "highlights": [
+        "domain / db / scraper / web を責務分離したモノレポとし、Drizzle と PGlite で Docker なしに DB 込みの開発が完結",
+        "収集系に最小遅延とジッター・Circuit Breaker・二重の kill switch を実装し、対象への負荷を抑える",
+        "利用規約・robots.txt を確認したうえで、大学ポータルの公開シラバスから当日の時間割を取得する LIVE 機能を実装",
+        "CSP nonce・厳格なセキュリティヘッダー・366 件のテストと本番ビルド検証を整備し、公開環境向けに仕上げた"
+      ]
+    },
+    {
+      "slug": "minecraft-vlm-harness",
+      "title": "Minecraft VLM Harness",
+      "tagline": "ローカル VLM が Minecraft をリアルタイム操作するエージェント基盤（開発中）",
+      "description": "Fabric MOD で Minecraft Java Edition のフレームバッファを取得し、ローカルで動く VLM がリアルタイムに移動・視点操作・採掘などを行うエージェントハーネス。人間はブラウザの操作コンソールから目標を指示し、エージェントの現在の計画・行動・理由をライブで確認できる。低頻度で長期計画を立てる Planner と高頻度で次の一手を決める Actor の二層構成で応答性を確保している。現在は観測強化フェーズまで実装が進み、反射層を含む自律タスク達成の検証を続けている。",
+      "createdAt": "2026-08-04",
+      "status": "wip",
+      "primaryLang": "Python",
+      "tech": [
+        "python",
+        "java"
+      ],
+      "highlights": [
+        "Planner（低頻度・長文出力）と Actor（高頻度・短文出力）の二層推論カデンスでローカル VLM の遅さを吸収",
+        "Fabric MOD 側は観測・実行・反射層に限定し、意思決定と UI を Python 側へ集約する設計原則を徹底",
+        "WebSocket を制御用のテキストフレームと画像用のバイナリフレームに分け、ブリッジの遅延を最小化",
+        "HLD / LLD と検証結果を段階的に記録し、未実測の数値は「確定待ち」と明記して開発を進めるプロセス"
+      ]
+    },
+    {
+      "slug": "portfolio",
+      "title": "Portfolio",
+      "tagline": "GitHub 連携とコード閲覧機能を備えた、このサイト自体の実装",
+      "description": "このポートフォリオサイト自体のリポジトリ。React 19 + Vite + Tailwind CSS v4 の SPA を Cloudflare Workers で配信し、手書きの制作物情報をビルド時にバンドルしつつ、GitHub 実測値（言語構成比・更新日時）を Worker 経由で後追い表示する二層構造を採る。非公開リポジトリのソースを固定コミット SHA・許可グロブ・多層防御で安全に閲覧できるコードビューアを自作し、検索エンジンと LLM 学習クローラの両方から収集を拒否する noindex 設計を徹底している。",
+      "createdAt": "2026-08-15",
+      "status": "wip",
+      "primaryLang": "TypeScript",
+      "tech": [
+        "typescript",
+        "react",
+        "vite",
+        "tailwind",
+        "workers"
+      ],
+      "highlights": [
+        "手書きメタデータをビルド時にバンドルし、GitHub API 由来の動的値は後追いで差し込む二層構造で、API 障害時も表示を継続",
+        "非公開リポジトリのコードを固定 SHA・許可グロブ・7 層の多層防御で公開する、読み取り専用のコードビューアを自作",
+        "GitHub PAT を Worker 内に留めてクライアントへ一切露出させず、Contents API をプロキシしてトークンを保護",
+        "検索エンジンと LLM 学習クローラの双方から収集を拒否する noindex 設計と、scroll-driven animation による演出"
+      ]
+    },
+    {
+      "slug": "eris-harness",
+      "title": "Eris Harness",
+      "tagline": "ローカル LLM を Discord・音声通話・CLI から使う個人用 AI アシスタント基盤",
+      "description": "llama.cpp（llama-server）で動くローカル LLM を核に、Discord Bot・ボイスチャンネルでの音声対話・CLI の端末モードという 3 経路から使える個人用アシスタント。テキストチャットでは Web 検索・URL 取得・Python 実行・逆画像検索といったツールをモデルが自律的に呼び出し、呼び出し引数や実行状態、thinking 対応モデルの思考テキストまでリアルタイムに（thinking は日本語訳して）表示する。ボイスチャンネルでは呼びかけ検知から無音/終了語による質問確定・文字起こし・応答生成・音声合成までを一連のパイプラインとして実装している。llama-server は OS 別の設定から起動し、モデルが手元に無ければ Hugging Face から自動取得する。",
+      "createdAt": "2026-09-04",
+      "status": "completed",
+      "primaryLang": "Python",
+      "tech": [
+        "python"
+      ],
+      "highlights": [
+        "Web 検索・URL 取得・Python 実行・逆画像検索をモデルが自律的に呼び出すツール基盤を実装し、検索語や実行前コードを逐次表示して透明性を確保",
+        "呼びかけ検知 → 無音/終了語による質問確定 → 文字起こし → 応答生成 → 音声合成という音声対話パイプラインを構築",
+        "thinking 対応モデルの思考テキストを文単位でキャッシュしつつ日本語へリアルタイム機械翻訳し、描画パスから翻訳処理を切り離してライブ表示の遅延を解消",
+        "Python 実行ツールに POSIX 環境でのメモリ・CPU・ファイルサイズ制限とタイムアウトを設け、Windows でも静的チェックとタイムアウトを両立"
+      ]
+    }
+  ]
+}
