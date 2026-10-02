@@ -306,6 +306,8 @@ def readme_works() -> None:
     path = ROOT / "README.md"
     text = path.read_text(encoding="utf-8")
     start, end = "<!-- WORKS:START -->", "<!-- WORKS:END -->"
+    if start not in text or end not in text:
+        return
     head, rest = text.split(start, 1)
     _, tail = rest.split(end, 1)
     path.write_text(f"{head}{start}\n{chr(10).join(blocks)}\n{end}{tail}", encoding="utf-8")
