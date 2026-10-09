@@ -96,6 +96,31 @@ def private_commit_dates(user_id: str) -> list[str]:
     return dates
 
 
+def private_item_dates(years: list[int]) -> list[str]:
+    """プライベートリポジトリで自分が作成した PR / issue の作成日 (UTC)。"""
+    dates = []
+    for year in years:
+        for kind in ("pr", "issue"):
+            cursor = None
+            while True:  # Search API は 1 クエリ 1000 件までなので年ごとに分ける
+                r = gql(
+                    """
+                    query($q: String!, $cursor: String) {
+                      search(type: ISSUE, query: $q, first: 100, after: $cursor) {
+                        pageInfo { hasNextPage endCursor }
+                        nodes { ... on PullRequest { createdAt } ... on Issue { createdAt } }
+                      }
+                    }
+                    """,
+                    {"q": f"author:{USERNAME} is:private is:{kind} created:{year}-01-01..{year}-12-31", "cursor": cursor},
+                )["search"]
+                dates += [n["createdAt"][:10] for n in r["nodes"] if n]
+                if not r["pageInfo"]["hasNextPage"]:
+                    break
+                cursor = r["pageInfo"]["endCursor"]
+    return dates
+
+
 def fetch() -> dict:
     base = gql(
         """
@@ -148,11 +173,14 @@ def fetch() -> dict:
                 days[d["date"]] = d["contributionCount"]
 
     # プロフィールで「Private contributions」を非表示にしていると contributionsCollection から
-    # プライベート分が消えるため、プライベートリポジトリのコミットを直接数えて足し込む
+    # プライベート分が消えるため、プライベートリポジトリのコミット / PR / issue を直接数えて足し込む
     if not private_shown:
         for date in private_commit_dates(base["id"]):
             year = int(date[:4])
             commits_by_year[year] = commits_by_year.get(year, 0) + 1
+            total_contrib += 1
+            days[date] = days.get(date, 0) + 1
+        for date in private_item_dates(years):
             total_contrib += 1
             days[date] = days.get(date, 0) + 1
 
