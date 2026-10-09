@@ -37,11 +37,71 @@ def gql(query: str, variables: dict | None = None) -> dict:
     return body["data"]
 
 
+def private_commit_dates(user_id: str) -> list[str]:
+    """アクセスできるプライベートリポジトリ (fork 除く) のデフォルトブランチにある自分のコミット日 (UTC)。"""
+    names, cursor = [], None
+    while True:
+        r = gql(
+            """
+            query($cursor: String) {
+              viewer {
+                repositories(privacy: PRIVATE, isFork: false, first: 100, after: $cursor,
+                             ownerAffiliations: [OWNER, COLLABORATOR, ORGANIZATION_MEMBER]) {
+                  pageInfo { hasNextPage endCursor }
+                  nodes { owner { login } name }
+                }
+              }
+            }
+            """,
+            {"cursor": cursor},
+        )["viewer"]["repositories"]
+        names += [(n["owner"]["login"], n["name"]) for n in r["nodes"]]
+        if not r["pageInfo"]["hasNextPage"]:
+            break
+        cursor = r["pageInfo"]["endCursor"]
+
+    dates = []
+    for owner, name in names:
+        cursor = None
+        while True:
+            ref = gql(
+                """
+                query($owner: String!, $name: String!, $author: ID!, $cursor: String) {
+                  repository(owner: $owner, name: $name) {
+                    defaultBranchRef {
+                      target {
+                        ... on Commit {
+                          history(author: {id: $author}, first: 100, after: $cursor) {
+                            pageInfo { hasNextPage endCursor }
+                            nodes { authoredDate }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                """,
+                {"owner": owner, "name": name, "author": user_id, "cursor": cursor},
+            )["repository"]["defaultBranchRef"]
+            if not ref:  # 空リポジトリ
+                break
+            h = ref["target"]["history"]
+            dates += [
+                dt.datetime.fromisoformat(n["authoredDate"].replace("Z", "+00:00")).astimezone(dt.timezone.utc).date().isoformat()
+                for n in h["nodes"]
+            ]
+            if not h["pageInfo"]["hasNextPage"]:
+                break
+            cursor = h["pageInfo"]["endCursor"]
+    return dates
+
+
 def fetch() -> dict:
     base = gql(
         """
         query($login: String!) {
           user(login: $login) {
+            id
             createdAt
             followers { totalCount }
             contributionsCollection { contributionYears }
@@ -57,6 +117,7 @@ def fetch() -> dict:
     commits_by_year: dict[int, int] = {}
     days: dict[str, int] = {}
     total_contrib = 0
+    private_shown = False  # プロフィール設定でプライベート分が表示される状態か
     for year in years:
         c = gql(
             """
@@ -65,6 +126,7 @@ def fetch() -> dict:
                 contributionsCollection(from: $from, to: $to) {
                   totalCommitContributions
                   restrictedContributionsCount
+                  commitContributionsByRepository(maxRepositories: 100) { repository { isPrivate } }
                   contributionCalendar {
                     totalContributions
                     weeks { contributionDays { date contributionCount } }
@@ -77,10 +139,22 @@ def fetch() -> dict:
         )["user"]["contributionsCollection"]
         # 権限の無いプライベート分は restricted にまとめられるため合算する
         commits_by_year[year] = c["totalCommitContributions"] + c["restrictedContributionsCount"]
+        private_shown |= c["restrictedContributionsCount"] > 0 or any(
+            r["repository"]["isPrivate"] for r in c["commitContributionsByRepository"]
+        )
         total_contrib += c["contributionCalendar"]["totalContributions"]
         for w in c["contributionCalendar"]["weeks"]:
             for d in w["contributionDays"]:
                 days[d["date"]] = d["contributionCount"]
+
+    # プロフィールで「Private contributions」を非表示にしていると contributionsCollection から
+    # プライベート分が消えるため、プライベートリポジトリのコミットを直接数えて足し込む
+    if not private_shown:
+        for date in private_commit_dates(base["id"]):
+            year = int(date[:4])
+            commits_by_year[year] = commits_by_year.get(year, 0) + 1
+            total_contrib += 1
+            days[date] = days.get(date, 0) + 1
 
     repos, stars, langs = 0, 0, defaultdict(lambda: {"size": 0, "color": "#888"})
     cursor = None
