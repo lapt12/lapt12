@@ -17,7 +17,7 @@
 
 <g class="fade" style="animation-delay:0.00s"><line x1="48" y1="39.5" x2="72" y2="39.5" stroke="#5c5c5c"/><text x="84" y="44" font-size="13" fill="#111111"><tspan font-weight="600" letter-spacing="1.8">ACTIVITY</tspan><tspan dx="8" letter-spacing=".4" fill="#676767">/ GitHub in numbers</tspan></text></g>
 <line x1="48" y1="84" x2="852" y2="84" stroke="#111111" class="draw"/>
-<g class="up" style="animation-delay:0.10s"><text x="48.0" y="114" font-size="12" fill="#676767">Commits</text><text x="48.0" y="172" fill="#111111"><tspan font-size="52" font-weight="700" letter-spacing="-1.5">980</tspan><tspan dx="6" font-size="14" fill="#5c5c5c">commits</tspan></text><text x="48.0" y="198" font-size="12" fill="#676767">since 2024</text></g>
+<g class="up" style="animation-delay:0.10s"><text x="48.0" y="114" font-size="12" fill="#676767">Commits</text><text x="48.0" y="172" fill="#111111"><tspan font-size="52" font-weight="700" letter-spacing="-1.5">981</tspan><tspan dx="6" font-size="14" fill="#5c5c5c">commits</tspan></text><text x="48.0" y="198" font-size="12" fill="#676767">since 2024</text></g>
 <g class="up" style="animation-delay:0.18s"><text x="336.0" y="114" font-size="12" fill="#676767">Repositories</text><text x="336.0" y="172" fill="#111111"><tspan font-size="52" font-weight="700" letter-spacing="-1.5">39</tspan><tspan dx="6" font-size="14" fill="#5c5c5c">repos</tspan></text><text x="336.0" y="198" font-size="12" fill="#676767">owned, non-fork</text></g>
 <line x1="316.0" y1="100" x2="316.0" y2="204" stroke="#d8d6cf"/>
 <g class="up" style="animation-delay:0.26s"><text x="604.0" y="114" font-size="12" fill="#676767">Longest streak</text><text x="604.0" y="172" fill="#111111"><tspan font-size="52" font-weight="700" letter-spacing="-1.5">11</tspan><tspan dx="6" font-size="14" fill="#5c5c5c">days</tspan></text><text x="604.0" y="198" font-size="12" fill="#676767">current 3 days</text></g>
@@ -25,10 +25,10 @@
 <line x1="48" y1="220" x2="852" y2="220" stroke="#d8d6cf"/>
 <text x="48" y="258" font-size="12" font-weight="600" letter-spacing="1.6" fill="#5c5c5c">COMMITS BY YEAR</text>
 <text x="48" y="287" class="mono" font-size="12" fill="#676767">2024</text><rect x="118" y="279" width="664" height="6" fill="#eeece6"/><rect class="draw" style="animation-delay:0.30s" x="118" y="279" width="2.9" height="6" fill="#ff4d1c"/><text x="852" y="287" text-anchor="end" class="mono" font-size="12" fill="#111111">3</text>
-<text x="48" y="311" class="mono" font-size="12" fill="#676767">2025</text><rect x="118" y="303" width="664" height="6" fill="#eeece6"/><rect class="draw" style="animation-delay:0.40s" x="118" y="303" width="283.0" height="6" fill="#ff4d1c"/><text x="852" y="311" text-anchor="end" class="mono" font-size="12" fill="#111111">292</text>
-<text x="48" y="335" class="mono" font-size="12" fill="#676767">2026</text><rect x="118" y="327" width="664" height="6" fill="#eeece6"/><rect class="draw" style="animation-delay:0.50s" x="118" y="327" width="664.0" height="6" fill="#ff4d1c"/><text x="852" y="335" text-anchor="end" class="mono" font-size="12" fill="#111111">685</text>
+<text x="48" y="311" class="mono" font-size="12" fill="#676767">2025</text><rect x="118" y="303" width="664" height="6" fill="#eeece6"/><rect class="draw" style="animation-delay:0.40s" x="118" y="303" width="282.6" height="6" fill="#ff4d1c"/><text x="852" y="311" text-anchor="end" class="mono" font-size="12" fill="#111111">292</text>
+<text x="48" y="335" class="mono" font-size="12" fill="#676767">2026</text><rect x="118" y="327" width="664" height="6" fill="#eeece6"/><rect class="draw" style="animation-delay:0.50s" x="118" y="327" width="664.0" height="6" fill="#ff4d1c"/><text x="852" y="335" text-anchor="end" class="mono" font-size="12" fill="#111111">686</text>
 <text x="48" y="394" font-size="12" font-weight="600" letter-spacing="1.6" fill="#5c5c5c">LAST 12 MONTHS</text>
-<text x="852" y="394" text-anchor="end" font-size="12" fill="#676767"><tspan font-weight="700" fill="#111111">774</tspan> contributions</text>
+<text x="852" y="394" text-anchor="end" font-size="12" fill="#676767"><tspan font-weight="700" fill="#111111">775</tspan> contributions</text>
 <text x="78" y="418" font-size="10" fill="#676767">Oct</text>
 <rect class="fade" style="animation-delay:0.000s" x="78" y="426" width="12" height="12" fill="#ff4d1c" fill-opacity="0.25"><title>2025-10-05: 2</title></rect>
 <rect class="fade" style="animation-delay:0.000s" x="78" y="441" width="12" height="12" fill="#eeece6" stroke="#d8d6cf" stroke-width=".5"><title>2025-10-06: 0</title></rect>
@@ -411,7 +411,7 @@
 <rect class="fade" style="animation-delay:0.624s" x="858" y="456" width="12" height="12" fill="#eeece6" stroke="#d8d6cf" stroke-width=".5"><title>2026-10-06: 0</title></rect>
 <rect class="fade" style="animation-delay:0.624s" x="858" y="471" width="12" height="12" fill="#ff4d1c" fill-opacity="0.25"><title>2026-10-07: 3</title></rect>
 <rect class="fade" style="animation-delay:0.624s" x="858" y="486" width="12" height="12" fill="#ff4d1c" fill-opacity="0.25"><title>2026-10-08: 4</title></rect>
-<rect class="fade" style="animation-delay:0.624s" x="858" y="501" width="12" height="12" fill="#ff4d1c" fill-opacity="0.25"><title>2026-10-09: 2</title></rect>
+<rect class="fade" style="animation-delay:0.624s" x="858" y="501" width="12" height="12" fill="#ff4d1c" fill-opacity="0.25"><title>2026-10-09: 3</title></rect>
 <text x="48" y="451" font-size="10" fill="#676767">Mon</text>
 <text x="48" y="481" font-size="10" fill="#676767">Wed</text>
 <text x="48" y="511" font-size="10" fill="#676767">Fri</text>
