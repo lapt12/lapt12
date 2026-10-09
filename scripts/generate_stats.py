@@ -176,7 +176,6 @@ def activity(s: dict, t: dict) -> str:
     # 大きな数字 + 小さな単位
     cols = [
         ("Commits", s["total_commits"], "commits", f"since {s['created'][:4]}"),
-        ("Contributions", s["total_contrib"], "total", f"PR {s['prs']} · Stars {s['stars']}"),
         ("Repositories", s["repos"], "repos", "owned, non-fork"),
         ("Longest streak", longest, "days", f"current {cur} days"),
     ]
